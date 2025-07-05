@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Advance International - Project 60fps</title>
+    <link rel="icon" type="image/png" href="misc/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scripts.js"></script>
+  </head>
+  <body id="top" style="background-image: url('misc/bg8.gif');">
+    <header>
+      <span class="burger" id="burger" onclick="Nav()">&#9776;</span>
+      <h1>Project 60fps</h1>
+      <a href="updates.html"><img class="logo2" src="misc/title_right.png"></a>
+      <nav id="mySidenav">
+        <h2>Game Website</h2>
+        <a href="index.html" class="button">&#8617; BACK</a>
+        <a href="updates.html" class="button spaced">Updates</a>
+        <a href="project60fps.html" class="button-active spaced">Project 60fps</a>
+        <a href="hints.html" class="button spaced">Tips & Hints</a>
+        <a href="external.html" class="button spaced">External Links</a>
+        <a href="support.html" class="button spaced">Projects & Support</a>
+        <div></div>
+      </nav>
+    </header>
+    <section onclick="closeNav()">
+      <div class="block">
+        <h1>Project 60fps</h1>
+        <p>The goal of this project is to make the Android port of Sonic Advance run at 60fps. However, while this sounds simple, this task is actually too demanding to make it possible. Therefore, I made this page to explain how to make the game run smoothly and why it is complicated.</p>
+        <p>Also, if you have enough experience with Java/Smali programming and would like to give some help for this project, you can contact me via the <strong>Furrican Homepage</strong>.</p>
+        <img class="center furrican" src="misc/furrican1.png">
+      </div>
+      <div class="block">
+        <h3>How to make the game run at 60fps?</h3>
+        <p>Well... the answer is actually simple!
+        <p>First, you need to decompile the game's APK file to access the game's code. Then, all you have to do is to put a value to 0 in the <strong>getFrameTime()</strong> method of the <strong>MainState</strong> smali file located in the <strong>MFLib</strong> folder.</p>
+        <img class="center" src="screenshots/project1.PNG">
+        <p>Once this value is changed, recompile the APK, and voila! Problem solved, right?</p>
+        <p><strong>WRONG! As it turns out, doing so makes the game runs too fast! It runs 4 times faster than it supposed to be.</strong></p>
+      </div>
+      <div class="block">
+        <h3>What is going on?</h3>
+        <p>Before talking about the solution, I would like to explain what is going on in the game.</p>
+        <p>First of all, we all know that the Android port of Sonic Advance has a problematic frame rate. The original version of the Android port initally runs at <strong>12-13fps</strong>. But the International mod makes the game run at <strong>15fps</strong>.</p>
+        <p>While you might think that the game lags so much (at least, not in this way), <strong>the game is actually desigend to run at 15fps!</strong></p>
+        <p>Here's the proof that the game is intended to run at this frame rate:</p>
+        <img class="center" src="screenshots/options1.gif">
+        <p>As you can see, this is the Options menu running at 15fps.</p>
+        <p>Now, what I'm gonna do is to change the value that determines the speed of the options banner.<br>
+          Located in the <strong>TitleState</strong> smali file is the <strong>optionOffsetX</strong> value set to 4. This value determines the movement of the options banner per frame. When it's equal 4, that means the options banner moves 4 pixels to the left per frame.</p>
+        <p>For this example, I will put the <strong>optionOffsetX</strong> value to 1.</p>
+        <img class="center" src="screenshots/project0.PNG">
+        <p>After decompilation, you can see that the options banner on top of the screen now moves 4 times slower.<br>
+          Or more accurately, it moves 1 pixel to the left per frame.</p>
+        <img class="center" src="screenshots/options2.gif">
+        <p>However, if I make the game run at 60fps, here is how the options banner behaves:</p>
+        <img class="center" src="screenshots/options3.gif">
+        <p>As you can see now is that the options banner now moves at its intended speed, but in a smoother frame rate!<br>
+          The options banner still moves 1 pixel to the left per frame, but because now the game runs at 60fps, it looks like I made the options banner moves smoother!</p>
+      </div>
+      <div class="block">
+        <h3>The solution in theory</h3>
+        <p>Alright. We have an example of how to fix an animation when giving the game a different frame rate.</p>
+        <p>Now, the question that is actually the right one to ask is this:<br>
+        <strong>How to make the game run at 60fps and at the right speed?</strong></p>
+        <p>Well, here's my theory: Since the game is intentionally running at 15fps, <strong>we have to change all the values regarding speed, physics, gravity, time and animation frames by dividing or multiplying all those values by 4.</strong> In this way, the game will run 4 times slower at 15fps, but it will run at normal speed at 60fps!</p>
+        <p>You might think that this is a good news, but the problem is that this is more complicated. You see, Sonic Advance is a quite an ambitious game in terms of programming. <strong>Tracking down every values regarding speed, physics, gravity, time and animation frames will take a lot of time, patience and understandings of the game's code.</strong> Not to mention a few glitches to take into consideration, such as the opening animation not working properly at one point.</p>
+        <hr>
+        <p>With all that said, <strong>I need help from experimented Java/Smali programmers, with good debugging tools if possible, to complete this project.</strong> The frame rate is by far the most complained issue about the Android port of Sonic Advance. If we can solve this issue, we can finally have the best and definitive version of Sonic Advance on Android!</p>
+      </div>
+    </section>
+    <footer>
+      <br><hr>
+      <p>
+        <strong>
+          Original game ©SEGA CORPORATION.<br>
+          ©SONICTEAM/SEGA CORPORATION, 2001, 2011, 2013. All rights reserved.<br>
+          SONIC ADVANCE, Sonic the Hedgehog and all related characters are registered trademarks of SEGA CORPORATION.
+        </strong>
+      </p>
+      <div></div>
+    </footer>
+  </body>
+</html>
