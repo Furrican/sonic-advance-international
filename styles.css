@@ -247,6 +247,7 @@ ul{
   nav{
     overflow-x: visible;
     width: 310px;
+    top: 18px;
     transition: 0s;
   }
   .burger{
@@ -255,9 +256,6 @@ ul{
 }
 
 @media (max-width: 600px){
-  header h1{
-    display: none;
-  }
   .logo{
     width: 58%;
   }
