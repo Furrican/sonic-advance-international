@@ -146,7 +146,7 @@ ul{
 }
 .external{
   flex-direction: column;
-  margin-bottom: 12px;
+  margin: 6px;
 }
 .external a{
   min-height: 38px;
