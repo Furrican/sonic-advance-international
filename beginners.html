@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="scripts.js"></script>
   </head>
-  <body id="top" style="background-image: url('misc/bg2.gif');">
+  <body style="background-image: url('misc/bg2.gif');">
     <header>
       <span class="burger" id="burger" onclick="Nav()">&#9776;</span>
       <a href="updates.html"><img class="logo2" src="misc/title_right.png"></a>
@@ -17,10 +17,6 @@
         <a href="#abilities" class="button">Common Abilities</a>
         <a href="#obstacles" class="button">Common Obstacles</a>
         <a href="#rings" class="button">Rings</a>
-        <a href="#sonic" class="button">Sonic Abilities</a>
-        <a href="#tails" class="button">Tails Abilities</a>
-        <a href="#knuckles" class="button">Knuckles Abilities</a>
-        <a href="#amy" class="button">Amy Abilities</a>
         <a href="#morehelp" class="button">More Help</a>
         <div></div>
       </nav>
@@ -45,8 +41,11 @@
       <div class="block">
         <br><img src="screenshots/beginners3.png" class="center">
         <p>
-          <strong>SPECIAL ATTACK:</strong><br>
-          You can perform a special attack by pressing the <strong>B button</strong>. Each character as their own special attacks.
+          <strong><span style="color: lime;">NEW!</span> PRESERVING JUMP HEIGHT BY BOUNCING:</strong><br>
+          If you spin jump by holding down the <strong>A button</strong> and land on a badnik or an item box, you will bounce slightly higher than your jump height.
+        </p>
+        <p>
+          For Amy, you have to use the Hammer Whirl ability (check Amy's Tips & Hints for more information).
         </p>
       </div>
       <div class="block">
@@ -105,28 +104,19 @@
           You can defeat a Badnik by attacking. Doing so will reveal an animal.
         </p>
         <p>
-          Each badnik has its own behaviours. Learn their patterns to defeat them efficently.<br>
+          Each badnik has its own behaviors. Learn their patterns to defeat them efficently.<br>
           Watch out for those who can defend themselves, as they can make you receive damage.
         </p>
       </div>
       <div class="block">
-        <br><img src="screenshots/beginners7.png" class="center"><br>
-        <br><img src="screenshots/beginners8.png" class="center">
-        <p>
-          <strong>GRINDING ON RAILS:</strong><br>
-          Both Sonic and Amy can grind on rails. To do so, jump on top of the rail.<br>
-          While grinding, you can move faster or jump the rail.
-        </p>
-      </div>
-      <div class="block">
-        <br><img src="screenshots/beginners9.png" class="center">
+        <br><img src="screenshots/beginners7.png" class="center">
         <p>
           <strong>TRAMPOLINES:</strong><br>
           Trampolines are used to make you jump higher. The more you jump on a trampoline, the higher you jump.
         </p>
       </div>
       <div class="block">
-        <br><img src="screenshots/beginners10.png" class="center">
+        <br><img src="screenshots/beginners8.png" class="center">
         <p>
           <strong>SPIKES:</strong><br>
           Spikes are an obstacle you have to avoid. If you touch the top of the spikes, you will receive damage.<br>
@@ -165,102 +155,9 @@
           The number of rings you can earn is based on the indicated number on the item box (5, 10 or ?).
         </p>
       </div>
-      <br><hr><h1 id="sonic">Sonic Abilites</h1>
-      <div class="block">
-        <br><img src="screenshots/beginners3.png" class="center">
-        <p>
-          <strong>SOMERSAULT/SLIDE:</strong><br>
-          Sonic can perform a somersault by pressing the <strong>B button</strong>.<br>
-          Press the <strong>B button</strong> 3 times to perform a slide.
-        </p>
-      </div>
-      <div class="block">
-        <br><img src="screenshots/beginners11.png" class="center">
-        <p>
-          <strong>JUMP DASH:</strong><br>
-          While jumping, press twice <strong>LEFT</strong> or <strong>RIGHT</strong> to perform a Jump Dash.<br>
-          This allows Sonic to jump further.
-        </p>
-      </div>
-      <br><hr><h1 id="tails">Tails Abilites</h1>
-      <div class="block">
-        <br><img src="screenshots/beginners12.png" class="center">
-        <p>
-          <strong>PROPELLER FLIGHT:</strong><br>
-          Tails can fly by pressing the <strong>A button</strong> multiple times.<br>
-          Be careful not to fly too long, or else Tails will get tired and descend.
-        </p>
-      </div>
-      <div class="block">
-        <br><img src="screenshots/beginners13.png" class="center">
-        <p>
-          <strong>TAILS ATTACK:</strong><br>
-          Press the <strong>B button</strong> to make Tails attack with his tails.
-        </p>
-      </div>
-      <br><hr><h1 id="knuckles">Knuckles Abilites</h1>
-      <div class="block">
-        <br><img src="screenshots/beginners14.png" class="center">
-        <p>
-          <strong>GLIDING:</strong><br>
-          While jumping, hold down the <strong>A button</strong> so Knuckles can glide.
-        </p>
-        <p>
-          While gliding, you can turn left or right and fall off by releasing the <strong>A button</strong>.
-        </p>
-      </div>
-      <div class="block">
-        <br><img src="screenshots/beginners15.png" class="center">
-        <p>
-          <strong>CLIMBING:</strong><br>
-          To climb on a wall, you need to hit a wall while gliding.
-        </p>
-        <p>
-          While climbing, you can ascend or descend and jump off the wall.
-        </p>
-      </div>
-      <div class="block">
-        <br><img src="screenshots/beginners16.png" class="center">
-        <p>
-          <strong>PUNCHES:</strong><br>
-          Press the <strong>B button</strong> to make Knuckles punch.<br>
-          Press the <strong>B button</strong> 3 times in a row to perform an uppercut.
-        </p>
-        <p>
-          While climbing, you can ascend or descend and jump off the wall.
-        </p>
-      </div>
-      <br><hr><h1 id="amy">Amy Abilites</h1>
-      <div class="block">
-        <br><img src="screenshots/beginners17.png" class="center">
-        <p>
-          <strong>HAMMER ATTACK:</strong><br>
-          Unlike the other characters, Amy doesn't curl in a ball and cannot attack simply by jumping. Instead, she uses her Piko Piko Hammer to attack.<br>
-          Press the <strong>B button</strong> to attack with her hammer.
-        </p>
-        <img src="screenshots/beginners18.png" class="center">
-        <p>
-          She can also attack while in the air.
-        </p>
-      </div>
-      <div class="block">
-        <br><img src="screenshots/beginners19.png" class="center">
-        <p>
-          <strong>GIANT STEP:</strong><br>
-          Amy cannot perform a Spin Dash, but she can perform a Giant Step to jump and move quickly.<br>
-          Hold down <strong>DOWN</strong> on the circle pad and press the <strong>A button</strong> to perform the Giant Step.
-        </p>
-      </div>
-      <div class="block">
-        <p>
-          <strong>HAMMER JUMP:</strong><br>
-          Hold down <strong>DOWN</strong> on the circle pad and press the <strong>B button</strong> to perform a Hammer Jump.<br>
-          This allows Amy to jump higher.
-        </p>
-      </div>
       <br><hr><h1 id="morehelp">More Help</h1>
       <div class="block">
-        <br><img src="screenshots/beginners20.png" class="center">
+        <br><img src="screenshots/beginners9.png" class="center">
         <p>
           <strong>HELP MENU:</strong><br>
           If you are looking for more help, you can check the <strong>Help Menu</strong> from the <strong>Options Menu</strong>.<br>
@@ -268,14 +165,14 @@
         </p>
       </div>
       <div class="block">
-        <br><img src="screenshots/beginners21.png" class="center">
+        <br><img src="screenshots/beginners10.png" class="center">
         <p>
           <strong>TIPS SCREEN:</strong><br>
           If you turned <strong>ON</strong> the <strong>Tips Screen</strong> option, you will be granted with a loading screen with tips displayed before starting an act.<br>
           These tips can be useful to learn more about the game.
         </p>
         <p>
-          You can disable this option to start an act quicker.
+          You can disable this option to start a stage quicker.
         </p>
       </div>
     </section>

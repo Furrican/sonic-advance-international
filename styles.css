@@ -1,5 +1,5 @@
 /* Main Tags */
-a, .burger{
+a{
   text-decoration: none;
   color: yellow;
 }
@@ -98,7 +98,7 @@ nav div{
   height: 100px;
 }
 nav h2{
-  width: 290px;
+  width: 300px;
 }
 section{
   margin: auto;
@@ -115,6 +115,21 @@ ul{
 }
 
 /* Custom Classes */
+._amy{
+  background-image: url('misc/amy.png'), url('misc/bg14.png');
+}
+._eggman{
+  background-image: url('misc/eggman.png'), url('misc/bg15.png');
+}
+._knuckles{
+  background-image: url('misc/knuckles.png'), url('misc/bg13.png');
+}
+._sonic{
+  background-image: url('misc/sonic.png'), url('misc/bg11.png');
+}
+._tails{
+  background-image: url('misc/tails.png'), url('misc/bg12.png');
+}
 .block{
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1px 12px 1px 12px;
@@ -129,7 +144,7 @@ ul{
   width: 48px;
   font-size: 32px;
 }
-.burger, .external, .external a, .hints, .index, .index a{
+.burger, .external, .external a, .hints, .hints1, .index, .index a, .webselect{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,6 +158,12 @@ ul{
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.char{
+  background-position: bottom right;
+  background-repeat: no-repeat, repeat;
+  background-size: 50vh, auto;
+  background-attachment: fixed;
 }
 .external{
   flex-direction: column;
@@ -162,9 +183,12 @@ ul{
   width: 400px;
   height: 250px;
 }
-.hints a{
+.hints a, .hints1 a{
   padding: 0 3px;
 }
+.hints1{
+    display: none;
+  }
 .index{
   flex-direction: column;
   width: 100%;
@@ -236,9 +260,6 @@ ul{
   min-width: 300px;
   width: 80%;
   height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -265,11 +286,17 @@ ul{
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 470px){
   .external a{
     font-size: 17px;
   }
   .gamejolt{
     width: 250px;
+  }
+  .hints{
+    display: none;
+  }
+  .hints1{
+    display: flex;
   }
 }
