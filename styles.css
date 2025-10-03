@@ -47,6 +47,9 @@ img{
   max-width: 100%;
   height: auto;
 }
+li{
+  margin-left: 16px;
+}
 nav{
   height: 100%;
   width: 0;
